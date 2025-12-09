@@ -1,0 +1,7 @@
+{
+  "name": "Edulab TelefoonSkills",
+  "description": "Een interactieve rollenspel-simulatie voor MBO-studenten om te oefenen met telefonische stage-sollicitaties bij Showbird.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
