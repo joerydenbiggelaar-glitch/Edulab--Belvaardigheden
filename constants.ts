@@ -46,7 +46,7 @@ export const SCENARIOS: Scenario[] = [
       - Als het gesprek slecht gaat: Verwijs naar de website.
     `,
     feedbackPrompt: BASE_FEEDBACK_PROMPT,
-    avatarUrl: 'https://api.dicebear.com/9.x/avataaars/svg?seed=Sarah&backgroundColor=b6e3f4',
+    avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200',
     externalLink: 'https://www.showbird.com'
   },
   {
@@ -71,7 +71,7 @@ export const SCENARIOS: Scenario[] = [
       - Als de student onbeleefd is, word je bozer.
     `,
     feedbackPrompt: BASE_FEEDBACK_PROMPT,
-    avatarUrl: 'https://api.dicebear.com/9.x/avataaars/svg?seed=Pieter&backgroundColor=ffdfbf',
+    avatarUrl: 'https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&q=80&w=200',
     externalLink: 'https://www.sligro.nl'
   },
   {
@@ -94,7 +94,7 @@ export const SCENARIOS: Scenario[] = [
       **GEDRAG:** Stem in met een afspraak als de student dit goed uitlegt.
     `,
     feedbackPrompt: BASE_FEEDBACK_PROMPT,
-    avatarUrl: 'https://api.dicebear.com/9.x/avataaars/svg?seed=Jansen&backgroundColor=c0aede',
+    avatarUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200',
     externalLink: 'https://www.kpn.com/zakelijk'
   },
   {
@@ -119,7 +119,54 @@ export const SCENARIOS: Scenario[] = [
       - Laat je overtuigen als de student met goede argumenten komt (kwaliteit, service).
     `,
     feedbackPrompt: BASE_FEEDBACK_PROMPT,
-    avatarUrl: 'https://api.dicebear.com/9.x/avataaars/svg?seed=Bakker&backgroundColor=ffdfbf',
+    avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200',
     externalLink: 'https://www.officecentre.nl'
+  },
+  {
+    id: 'juridisch-advies',
+    title: 'Scenario 5: Juridisch Advies',
+    subtitle: 'Klantvraag consumentenrecht',
+    description: 'Een klant belt met een vraag over garantie op een kapot product.',
+    companyName: 'Juridisch Loket',
+    companyColor: '#1e3a8a', // Dark Blue
+    isIncomingCall: true,
+    roleStudent: 'Juridisch Medewerker (MBO Juridisch).',
+    roleAI: 'Mevrouw de Vries, consument.',
+    context: 'Je werkt bij het Juridisch Loket. Een vrouw belt omdat haar wasmachine na 2,5 jaar stuk is gegaan en de winkel zegt dat de garantie voorbij is.',
+    assignment: 'Luister naar het probleem. Leg uit dat ze recht heeft op een deugdelijk product (wettelijke garantie) en adviseer haar om een brief te sturen naar de winkel.',
+    systemInstruction: `
+      **ROL:** Jij bent Mevrouw de Vries.
+      **CONTEXT:** Je wasmachine is na 2,5 jaar kapot. De winkel zegt: "Garantie is 2 jaar, dus jammer." Je belt het Juridisch Loket voor advies.
+      **EMOTIE:** Je bent verontwaardigd en bezorgd over de kosten.
+      **OPENING:** "Goedemiddag, met de Vries. Ik heb een probleem met een winkel en ik weet niet wat mijn rechten zijn."
+      **DOEL:** Je wilt horen dat je nog rechten hebt.
+      **GEDRAG:** Vraag: "Maar de garantie is toch voorbij?" Laat je geruststellen door de student.
+    `,
+    feedbackPrompt: BASE_FEEDBACK_PROMPT,
+    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200',
+    externalLink: 'https://www.juridischloket.nl'
+  },
+  {
+    id: 'financiele-vragen',
+    title: 'Scenario 6: Financiële Vragen',
+    subtitle: 'ZZP\'er met belastingvraag',
+    description: 'Een startende ondernemer belt met vragen over de BTW-aangifte.',
+    companyName: 'Administratiekantoor De Cijfers',
+    companyColor: '#0f766e', // Teal
+    isIncomingCall: true,
+    roleStudent: 'Junior Administrateur.',
+    roleAI: 'Meneer Visser, startende ZZP\'er (Schilder).',
+    context: 'Je werkt bij een administratiekantoor. Een klant (schilder) belt vlak voor het einde van het kwartaal.',
+    assignment: 'De klant is bang dat hij te laat is met zijn BTW-aangifte. Stel hem gerust, vraag naar zijn omzetgegevens en leg uit wanneer de deadline precies is (eind van de maand na het kwartaal).',
+    systemInstruction: `
+      **ROL:** Jij bent Meneer Visser, schilder en startende ZZP'er.
+      **CONTEXT:** Het is bijna einde van de maand. Je snapt die blauwe enveloppen niet goed. Je bent bang voor een boete.
+      **OPENING:** "Ja hoi met Visser hier. Zeg, ik krijg net een mailtje over de BTW, ben ik nou te laat?"
+      **EMOTIE:** Licht paniekerig, onzeker over administratie.
+      **GEDRAG:** Vraag simpele dingen: "Moet ik al mijn bonnentjes inleveren?" "Wanneer moet het betaald zijn?"
+    `,
+    feedbackPrompt: BASE_FEEDBACK_PROMPT,
+    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200',
+    externalLink: 'https://www.belastingdienst.nl'
   }
 ];
